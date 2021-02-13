@@ -17,10 +17,10 @@ The analytica team wants to get information of what songs users are listening to
 ## 2. Database schema design
 
 The design of the database is a Star schema. The cental fact table is Songplays where the information of each reproduction is stored. This fact table is connected to four different dimensions table:  
-    - Users table: Table where the users information as name, gender or level is stored.  
-    - Songs table: Where the songs data is stored, as title, year or duration.  
-    - Artist table: The data about the artist, like name and location is stored here.  
-    - Time table: Table where each timestamp is translated from a number in ms to a hour, day, month, year format.  
+        - Users table: Table where the users information as name, gender or level is stored.  
+        - Songs table: Where the songs data is stored, as title, year or duration.  
+        - Artist table: The data about the artist, like name and location is stored here.  
+        - Time table: Table where each timestamp is translated from a number in ms to a hour, day, month, year format.  
 The main advantages of a Star Schema is that it is that can be used with simple querys, is fast to aggregate data and it is improved for reading performance. The problem is that this cames with the inconvinients of a denormalized database, as problems with the data integrity and duplicate information.  
 To create this database, the "create_tables.py" script must be executed from terminal.  
 
